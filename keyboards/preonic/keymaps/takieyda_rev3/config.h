@@ -19,7 +19,7 @@
 #define ONESHOT_TAP_TOGGLE 2  /* Tapping this number of times holds the key until tapped once again. */
 #define ONESHOT_TIMEOUT 3000  /* Time (in ms) before the one shot key is released */
 
-#define ENCODER_DIRECTION_FLIP /* Flip encoder rotation direction */
+// #define ENCODER_DIRECTION_FLIP /* Flip encoder rotation direction */
 
 #ifdef AUDIO_ENABLE
 #    define STARTUP_SONG SONG(PREONIC_SOUND)

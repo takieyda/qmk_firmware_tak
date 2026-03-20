@@ -2,3 +2,5 @@ SRC += muse.c
 
 BOOTMAGIC_ENABLE = yes
 BOOTLOADER = stm32-dfu
+#ENCODER_ENABLE = yes
+#ENCODER_MAP_ENABLE = yes
