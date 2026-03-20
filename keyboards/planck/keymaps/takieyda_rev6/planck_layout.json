@@ -1,0 +1,234 @@
+[
+  {
+    "name": "Planck",
+    "notes": "https://www.keyboard-layout-editor.com/#/",
+    "plate": true
+  },
+  [
+    {
+      "c": "#adadad",
+      "t": "#000000\n#f7a319\n#18d1f2",
+      "f2": 1
+    },
+    "\n~\n`\n\n\n\n\n\n\nTab",
+    {
+      "c": "#cccccc",
+      "f2": 1
+    },
+    "\n!\n1\n\nBtLdr\n\n\n\n\nQ",
+    {
+      "f2": 1
+    },
+    "\n@\n2\n\n\n\n\n\n\nW",
+    {
+      "f2": 1
+    },
+    "\n#\n3\n\n\n\n\n\n\nE",
+    {
+      "f2": 1
+    },
+    "\n$\n4\n\n\n\n\n\n\nR",
+    {
+      "f2": 1
+    },
+    "\n%\n5\n\n\n\n\n\n\nT",
+    {
+      "f2": 1
+    },
+    "\n^\n6\n\n\n\n\n\n\nY",
+    {
+      "f2": 1
+    },
+    "\n&\n7\n\n\n\n\n\n\nU",
+    {
+      "f2": 1
+    },
+    "\n*\n8\n\n\n\n\n\n\nI",
+    {
+      "f2": 1
+    },
+    "\n(\n9\n\n\n\n\n\n\nO",
+    {
+      "f2": 1
+    },
+    "\n)\n0\n\n\n\n\n\n\nP",
+    {
+      "c": "#adadad",
+      "t": "#000000\n#f7a319",
+      "f2": 1
+    },
+    "\nDel\n\n\n\n\n\n\n\nBksp"
+  ],
+  [
+    {
+      "c": "#f09e19",
+      "t": "#000000",
+      "f2": 1
+    },
+    "\nDel\nDel\nNav\n\n\n\n\n\nEsc",
+    {
+      "c": "#cccccc",
+      "t": "#000000\n#f7a319",
+      "f2": 1
+    },
+    "\nF1\n\n\n\n\n\n\n\nA",
+    {
+      "f2": 1
+    },
+    "\nF2\n\n<i class='kb kb-Multimedia-Volume-Down-2'></i>\n\n\n\n\n\nS",
+    {
+      "f2": 1
+    },
+    "\nF3\n\n<i class='kb kb-Multimedia-Volume-Up-2'></i>\n\n\n\n\n\nD",
+    {
+      "f2": 1,
+      "n": true
+    },
+    "\nF4\n\n<i class='kb kb-Multimedia-Mute-2'></i>\n\n\n\n\n\nF",
+    {
+      "t": "#000000\n#f7a319\n#18d1f2",
+      "f2": 1
+    },
+    "\nF5\nPgUp\n\n\n\n\n\n\nG",
+    {
+      "f2": 1
+    },
+    "\nF6\nHome\n🠈\n\n\n\n\n\nH",
+    {
+      "f2": 1,
+      "n": true
+    },
+    "\n_\n-\n🠋\n\n\n\n\n\nJ",
+    {
+      "f2": 1
+    },
+    "\n+\n=\n🠉\n\n\n\n\n\nK",
+    {
+      "f2": 1
+    },
+    "\n{\n[\n🠊\n\n\n\n\n\nL",
+    {
+      "f2": 1
+    },
+    "\n}\n]\n\n\n\n\n\n\n; :",
+    {
+      "f2": 1
+    },
+    "\n|\n\\\n\nIns\n\n\n\n\n' \""
+  ],
+  [
+    {
+      "c": "#adadad",
+      "t": "#000000",
+      "a": 7,
+      "fa": [
+        2
+      ]
+    },
+    "Shift",
+    {
+      "c": "#cccccc",
+      "t": "#000000\n#f7a319",
+      "a": 4,
+      "fa": [
+        2,
+        1
+      ]
+    },
+    "\nF7\n\n\n\n\n\n\n\nZ",
+    "\nF8\n\n\n\n\n\n\n\nX",
+    "\nF9\n\n\n\n\n\n\n\nC",
+    "\nF10\n\n\n\n\n\n\n\nV",
+    {
+      "t": "#000000\n#f7a319\n#18d1f2",
+      "fa": [
+        2,
+        1,
+        1
+      ]
+    },
+    "\nF11\nPgDn\n\n\n\n\n\n\nB",
+    "\nF12\nENd\n\n\n\n\n\n\nN",
+    {
+      "t": "#000000",
+      "a": 7,
+      "f": 3
+    },
+    "M\n\n\n\nIns",
+    {
+      "f": 3
+    },
+    ", <\n\n\n\nPrtScr",
+    {
+      "f": 3
+    },
+    ". >\n\n\n\nScLck",
+    {
+      "f": 3
+    },
+    "/ ?\n\n\n\nPause",
+    {
+      "c": "#f7a319",
+      "fa": [
+        5
+      ]
+    },
+    "<i class='kb kb-Return-2'></i>"
+  ],
+  [
+    {
+      "c": "#adadad",
+      "f": 3
+    },
+    "Ctrl",
+    {
+      "f": 3
+    },
+    "Ctrl",
+    {
+      "f": 3
+    },
+    "Super",
+    {
+      "f": 3
+    },
+    "Alt",
+    {
+      "c": "#f7a319",
+      "fa": [
+        6
+      ]
+    },
+    "&dArr;",
+    {
+      "c": "#cccccc",
+      "w2": 2
+    },
+    "",
+    {
+      "x": 1,
+      "c": "#18d1f2"
+    },
+    "&uArr;",
+    {
+      "c": "#adadad",
+      "a": 4,
+      "fa": [
+        6,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ]
+    },
+    "\n<i class='kb kb-Multimedia-FastForward-End'></i>\n\n\n\n\n\n\n\n🠈",
+    "\n<i class='kb kb-Multimedia-Volume-Down-2'></i>\n\n\n\n\n\n\n\n🠋",
+    "\n<i class='kb kb-Multimedia-Volume-Up-2'></i>\n\n\n\n\n\n\n\n🠉",
+    "\n<i class='kb kb-Multimedia-Play'></i>\n\n\n\n\n\n\n\n🠊"
+  ]
+]
