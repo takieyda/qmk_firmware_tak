@@ -1,4 +1,4 @@
-/* Copyright 2015-2021 Jack Humbert
+/* Copyright 2015-2017 Jack Humbert
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,10 +15,6 @@
  */
 
 #include QMK_KEYBOARD_H
-
-#ifdef AUDIO_ENABLE
-#    include "muse.h"
-#endif
 
 enum planck_layers {
   _QWERTY,
@@ -49,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      | Ctrl | GUI  | Alt  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
-[_QWERTY] = LAYOUT_planck_1x2uC(
+[_QWERTY] = LAYOUT_planck_mit(
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,  \
   LT(_NAV, KC_ESC), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,  \
   OSM(MOD_LSFT), KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,  \
@@ -67,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
-[_LOWER] = LAYOUT_planck_1x2uC(
+[_LOWER] = LAYOUT_planck_mit(
   KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, KC_DEL , \
   KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,    KC_PLUS,    KC_LCBR, KC_RCBR, KC_PIPE, \
   _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______,    _______,    _______, _______, _______, \
@@ -85,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
-[_RAISE] = LAYOUT_planck_1x2uC(
+[_RAISE] = LAYOUT_planck_mit(
   KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
   KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_PGUP, KC_HOME, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS, \
   _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_PGDN, KC_END , _______, _______, _______, _______, _______, \
@@ -96,18 +92,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      | Boot |      |      |      |      |      |      |      |      |      |  Del |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |Qwerty|      |      |      |      |
+ * |      |MuTogg|      |AuTogg|      |ClkTog|ClkRst|Qwerty|      |      |      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |  Ins | PrScr| ScLk | Pause|      |
+ * |      |MuMode|      |VoicPr|VoicNx|CkFrq-|CkFrq+|  Ins | PrScr| ScLk | Pause|      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |Brite |      |      |      |      |             |      |      |      |      |      |
+ * |BLTogg|BLStep|Breath|      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
-[_ADJUST] = LAYOUT_planck_1x2uC(
-  _______, QK_BOOT, _______, UG_TOGG, UG_NEXT, UG_HUEU, UG_HUED, UG_SATU, UG_SATD, UG_VALU, UG_VALD, KC_DEL,    \
-  _______, _______, _______, _______, _______, _______, _______, QWERTY,  _______, _______,  _______,  KC_INS,  \
-  _______, _______, _______, _______, _______, _______, _______, KC_INS,  KC_PSCR, KC_SCRL, KC_PAUS, _______,   \
-  BACKLIT, _______, _______, _______, _______,     _______,      _______, _______, _______, _______, _______    \
+[_ADJUST] = LAYOUT_planck_mit(
+  _______, QK_BOOT, _______, UG_TOGG, UG_NEXT, UG_HUEU, UG_SATU, UG_VALU, UG_SPDU, _______, _______, KC_DEL,  \
+  _______, _______, _______, _______, _______, _______, _______, QWERTY,  _______, _______, _______, KC_INS, \
+  _______, _______, _______, _______, _______, _______, _______, KC_INS,  KC_PSCR, KC_SCRL, KC_PAUS, _______,  \
+  BL_TOGG, BL_STEP, BL_BRTG, _______, _______,     _______,      _______, _______, _______, _______, _______   \
 ),
 
 /* Nav (Esc (Hold))
@@ -121,12 +117,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
-[_NAV] = LAYOUT_planck_1x2uC(
+[_NAV] = LAYOUT_planck_mit(
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL , \
   _______, _______, KC_VOLD, KC_VOLU, KC_MUTE, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
   _______, _______, _______, _______, _______,     _______,      _______, _______, _______, _______, _______  \
 )
+
 
 };
 
@@ -164,14 +161,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
   }
   return true;
-}
-
-bool music_mask_user(uint16_t keycode) {
-  switch (keycode) {
-    case RAISE:
-    case LOWER:
-      return false;
-    default:
-      return true;
-  }
 }

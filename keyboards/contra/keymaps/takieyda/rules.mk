@@ -1,0 +1,3 @@
+RGBLIGHT_ENABLE = yes
+
+LAYOUTS_HAS_RGB = yes

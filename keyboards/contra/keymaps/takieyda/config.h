@@ -1,7 +1,8 @@
-#ifndef CONFIG_USER_H
-#define CONFIG_USER_H
+// Copyright QMK Community
+// SPDX-License-Identifier: GPL-2.0+
 
-#include "config_common.h"
+#pragma once
+
 
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(PLANCK_SOUND)
@@ -13,12 +14,11 @@
                                 }
 #endif
 
+#define MUSIC_MASK (keycode != KC_NO)
+
 /*
  * MIDI options
  */
-
-/* Prevent use of disabled MIDI features in the keymap */
-//#define MIDI_ENABLE_STRICT 1
 
 /* enable basic MIDI features:
    - MIDI notes can be sent when in Music mode is on
@@ -37,7 +37,24 @@
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
 
-#define BACKLIGHT_BREATHING
-#define BREATHING_PERIOD 8
+/* ws2812 RGB LED */
+#define WS2812_DI_PIN F7
+#ifdef WS2812_DI_PIN
+   #define RGBLIGHT_LED_COUNT 24
+   #define RGBLIGHT_DEFAULT_HUE 127
+   #define RGBLIGHT_DEFAULT_SAT 255
+   #define RGBLIGHT_DEFAULT_VAL RGBLIGHT_LIMIT_VAL
+   #define RGBLIGHT_DEFAULT_SPD 0
 
+   #define RGBLIGHT_EFFECT_BREATHING
+   #define RGBLIGHT_EFFECT_RAINBOW_MOOD
+   #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+   #define RGBLIGHT_EFFECT_RGB_TEST
+   #define RGBLIGHT_EFFECT_STATIC_GRADIENT
+   #define RGBLIGHT_EFFECT_TWINKLE
+   #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_EFFECT_RAINBOW_SWIRL + 4
+
+   #define RGBLIGHT_HUE_STEP 8
+   #define RGBLIGHT_SAT_STEP 8
+   #define RGBLIGHT_VAL_STEP 8
 #endif
