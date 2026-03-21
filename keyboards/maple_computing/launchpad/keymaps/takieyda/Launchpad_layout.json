@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Maple Computing Launchpad",
+    "notes": "https://www.keyboard-layout-editor.com/"
+  },
+  [
+    {
+      "a": 7
+    },
+    "",
+    {
+      "t": "#000000\n\n\n#15aedd",
+      "a": 4,
+      "fa": [
+        2,
+        0,
+        0,
+        2
+      ]
+    },
+    "Undo\n\n\nCAD",
+    {
+      "x": 1
+    },
+    "Undo\n\n\nCAD",
+    "Cut\n\n\nTskMgr",
+    "Copy\n\n\nLock",
+    "Paste"
+  ],
+  [
+    {
+      "t": "#000000",
+      "a": 7
+    },
+    "",
+    {
+      "t": "#000000\n\n\n#15aedd",
+      "a": 4
+    },
+    "Cut\n\n\nTskMgr",
+    {
+      "x": 1,
+      "t": "#000000",
+      "a": 7
+    },
+    "",
+    "",
+    {
+      "t": "#000000\n\n\n#15aedd",
+      "a": 4
+    },
+    "Esc",
+    {
+      "c": "#15aedd",
+      "t": "#000000"
+    },
+    "\n\n\nFunc"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "t": "#000000\n\n\n#15aedd"
+    },
+    "Esc",
+    "Copy\n\n\nLock"
+  ],
+  [
+    {
+      "c": "#15aedd",
+      "t": "#000000"
+    },
+    "\n\n\nFunc",
+    {
+      "c": "#cccccc",
+      "t": "#000000\n\n\n#15aedd"
+    },
+    "Paste"
+  ]
+]
